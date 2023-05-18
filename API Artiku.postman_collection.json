@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "9b18e17a-f09e-42bb-a82d-b4dd881a84a4",
+		"name": "API Artiku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25632060"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"naura@gmail.com\",\r\n    \"password\" : \"naura\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/butterfly_course/public/api/login",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"butterfly_course",
+								"public",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 6|pLqGZWP8CLkyMz7NBTOLTHj8KPtf6YDRZti0MA5f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url1}}/butterfly_course/public/api/logout",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"butterfly_course",
+								"public",
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|yV9ieWeIIfoo6MacRLbed0o9nSprZpov5lD7d5aR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url1}}/butterfly_course/public/api/me",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"butterfly_course",
+								"public",
+								"api",
+								"me"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "Create Article",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|Dd1ErVsjT3vA7wWZKSwZE91Zs3aPSJk2Dq5u9vdG",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Belajar ",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Ghadiza/Downloads/english/thumbnail/Final Project - Podcast.png",
+									"disabled": true
+								},
+								{
+									"key": "content",
+									"value": "Lorem Ipsum",
+									"type": "text"
+								},
+								{
+									"key": "synopsis",
+									"value": "Lorem Ipsum",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url1}}/butterfly_course/public/api/articlesbyuser",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"butterfly_course",
+								"public",
+								"api",
+								"articlesbyuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Article",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|jUtjbSD34jX57Zm97YVrn9HMgy2JIL2oDKwSSBU3",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"The Good Bad Mother\",\r\n    \"synopsis\" : \"Drama Korea\",\r\n    \"content\" : \"Seorang ibu yang memiliki peternakan babi dan memiliki seorang anak jaksa\",\r\n    \"image\" : \"lorem\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/butterfly_course/public/api/articles/6",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"butterfly_course",
+								"public",
+								"api",
+								"articles",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Article",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 6|pLqGZWP8CLkyMz7NBTOLTHj8KPtf6YDRZti0MA5f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url1}}/butterfly_course/public/api/articles/5",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"butterfly_course",
+								"public",
+								"api",
+								"articles",
+								"5"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/butterfly_course/public/api/articles/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"butterfly_course",
+								"public",
+								"api",
+								"articles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Detail Data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|hRT5CfSYYMUtqzusXDJTayczxQdQjv5u3KG1Krj8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url1}}/butterfly_course/public/api/articles",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"butterfly_course",
+								"public",
+								"api",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
